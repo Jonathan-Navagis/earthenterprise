@@ -70,13 +70,15 @@ apache_extract = apache_env.Command(
         'tar xzf %s\n'
         'cd %s/srclib\n'
         'tar xzf %s\n'
-        'mv %s apr\n'
+        'cp -r %s apr\n'
+        'rm -rf %s\n'
         'tar xzf %s\n'
-        'mv %s apr-util\n'
+        'cp -r %s apr-util\n'
+        'rm -rf %s\n'
         'touch %s' % (build_root, build_root, apache_source, mm_source,
                       apache_version.replace('apache', 'httpd'),
-                      apache_apr_source, apache_apr_version,
-                      apache_apr_util_source, apache_apr_util_version,
+                      apache_apr_source, apache_apr_version, apache_apr_version,
+                      apache_apr_util_source, apache_apr_util_version, apache_apr_util_version,
                       apache_target))])
 
 # [2] Patch apache
