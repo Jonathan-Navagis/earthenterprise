@@ -61,6 +61,7 @@ postgresql_configure = postgresql_env.Command(
     [postgresql_env.MultiCommand(
         ('cd {build_root_escaped}\n'
          'export LD_LIBRARY_PATH={build_lib_dir_escaped}\n'
+         'export PYTHON=/usr/bin/python2.7\n'
          '{env_opt} ./configure --prefix=/opt/google --mandir=/opt/google/share/man '
             '--disable-rpath --enable-thread-safety --with-openssl --with-python '
             '--without-perl --without-readline --without-pam --without-krb5 {config_opt}\n'
