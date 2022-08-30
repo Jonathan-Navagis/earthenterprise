@@ -24,6 +24,7 @@ origenv = env;
 # let subdirs refer to headers as relative to the autoingest directory
 env = origenv.Clone();
 env.Append(CPPPATH = ['#fusion/autoingest', # static header files
+                      '#fusion/autoingest/sysman'
                       ])
 
 
