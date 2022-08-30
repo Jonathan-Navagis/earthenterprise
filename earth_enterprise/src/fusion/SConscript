@@ -103,6 +103,7 @@ env = origenv.Clone();
 
 
 env.Append(CPPPATH = [Dir('.'),    # generated header files
+                      '#fusion/autoingest',
                       '#fusion',   # static header files
                       '#fusion/asset-tests/include', # asset tests headers
                       ])
@@ -141,6 +142,7 @@ SConscript('geindexcheck/SConscript', exports='env')
 # also include the gst directory.
 env = origenv.Clone();
 env.Append(CPPPATH = [Dir('.'),    # generated header files
+                      '#fusion/autoingest',
                       '#fusion',   # static header files
                       '#fusion/gst',
                       ])
